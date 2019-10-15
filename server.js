@@ -7,10 +7,14 @@ var path = require("path");
 // =============================================================
 var app = express();
 
-var port = process.env.PORT || 8000;
+let PORT = process.env.PORT;
+if (PORT == null || PORT == "") {
+  PORT = 8000;
+}
 
-server.listen(port, function() {
-    console.log("App is running on port " + port);
+
+app.listen(PORT, function() {
+    console.log("App is running on port " + PORT);
 });
 
 
