@@ -7,12 +7,11 @@ var path = require("path");
 // =============================================================
 var app = express();
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8000;
-}
-app.listen(port);
+var port = process.env.PORT || 8000;
 
+server.listen(port, function() {
+    console.log("App is running on port " + port);
+});
 
 
 // Sets up the Express app to handle data parsing
