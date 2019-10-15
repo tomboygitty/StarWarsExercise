@@ -13,11 +13,6 @@ if (PORT == null || PORT == "") {
 }
 
 
-app.listen(PORT, function() {
-    console.log("App is running on port " + PORT);
-});
-
-
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
